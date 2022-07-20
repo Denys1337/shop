@@ -1,0 +1,49 @@
+.form {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+  &__item {
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_label {
+      font-size: 17px;
+    }
+
+    &_error {
+      font-size: 11px;
+      color: red;
+    }
+
+    &_input {
+      border: none;
+      background: none;
+      border-bottom: 1px solid #888888;
+      height: 30px;
+      margin: 10px 20px;
+      outline:none;
+      color:#FFF;
+      font-weight: bold;
+      &:hover{
+        border: none;
+        border-bottom: 1px solid red;      
+      }
+    }
+    &:focus{
+      border: none;
+      border-bottom: 1px solid red;
+    }
+  }
+  &_button{
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    width: 100%;
+    background: red;
+    color: #000;
+  }
+}
+
