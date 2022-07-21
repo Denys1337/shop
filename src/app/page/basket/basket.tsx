@@ -7,6 +7,7 @@ import UserInfoForm from "../../component/form/form";
 import {Link} from "react-router-dom";
 import { IAllSum, IBasket, IItemInCartProps, IProduct, IStore } from '../home/types';
 import { AnyAction } from 'redux';
+import React from 'react';
 
 
 const Basket: JSXElementConstructor<Matching<IBasket,any>> = ({itemsInCart, updateItemsInCart, updateAllAmount, allAmount, userInfo, clearPrice}) => {
@@ -66,7 +67,7 @@ const Basket: JSXElementConstructor<Matching<IBasket,any>> = ({itemsInCart, upda
                             {getProductCard()}
                         </div>
                         <UserInfoForm handleSubmit={(e: ChangeEvent<HTMLFormElement>): void => {
-                            setRequestJson(JSON.stringify({body: {userInfo, itemsInCart, allAmount}}));
+                            setRequestJson(JSON.stringify({body: {userInfo, itemsInCart, allAmount}}, null, 4));
                             deleteAmount();
                             clearPrice();
                         }}/>

@@ -23,7 +23,7 @@ const ProductCard: FC<IProductCardProps> = ({data, productsInCart, addProductInC
                 <Link to="/basket">
                     <div className='product-card_key'>
                     <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" sx={{color: '#000'}}>
                      Go to cart
                   </Button>
                 </CardActions>
